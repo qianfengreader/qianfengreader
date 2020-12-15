@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.dao.OrderMapper">
+
+    <insert id="insertOrder">
+        insert into zilongkuaikan.order values (null,#{transferid},#{payid},#{totalmount},#{status})
+    </insert>
+
+    <select id="findBytransferid" resultType="order">
+        select * from zilongkuaikan.order where transferid=#{transferid}
+    </select>
+
+
+    <update id="updateById">
+        UPDATE zilongkuaikan.order set status = #{status},payid = #{payid} where id = #{id}
+    </update>
+
+
+    <select id="findByStatus" resultType="order">
+        select * from zilongkuaikan.order where STATUS = 'WAIT_PAY'
+    </select>
+
+</mapper>

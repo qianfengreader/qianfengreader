@@ -14,5 +14,8 @@ public class BaseResp {
 
     private String message;
 
-    private Integer total;
+    private Long total;
+
+
+
 }

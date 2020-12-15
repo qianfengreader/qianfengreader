@@ -113,20 +113,4 @@ public class UserServiceImpl implements UserService {
         return baseResp;
 
     }
-
-    @Override
-    public BaseResp findByUsername(String username) {
-
-        User byUsername = userRepository.findByUsername(username);
-        BaseResp baseResp = new BaseResp();
-        if (byUsername !=null){
-            baseResp.setData(byUsername);
-            baseResp.setCode(200);
-            baseResp.setMessage("查询成功");
-        }else {
-            baseResp.setCode(201);
-            baseResp.setMessage("账号不存在");
-        }
-        return baseResp;
-    }
 }

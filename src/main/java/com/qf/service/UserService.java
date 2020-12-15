@@ -11,5 +11,4 @@ public interface UserService {
 
     BaseResp login(User user);
 
-    BaseResp findByUsername(String username);
 }

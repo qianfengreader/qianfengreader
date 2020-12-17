@@ -3,6 +3,7 @@ package com.qf.service;
 import com.qf.common.BaseResp;
 import com.qf.pojo.Book;
 
+import java.io.FileNotFoundException;
 import java.util.List;
 
 public interface BookService {
@@ -32,9 +33,22 @@ public interface BookService {
     BaseResp findAllBangDanFromWordsNum();
     /*---------------------------book.vue----------------------*/
     BaseResp findById(Integer bid);
-
     //查找 对应类型所有的书
     BaseResp findByTypeId(Integer tid, Integer page, Integer size);
+    //模糊查询
+    BaseResp findBySearch(String search);
+    //查询根据完本
+    BaseResp findAllByState();
+    //查询 isvip 为 免费
+    BaseResp findByIsvip();
 
+    /*----poi---*/
+    BaseResp findByIdReturnBook(Integer bid) throws Exception;
+
+    BaseResp saveAndFlush(Book book);
+
+    BaseResp deleteById(Integer bid);
+
+    BaseResp findByIdReturnBody(Integer bid);
 
 }

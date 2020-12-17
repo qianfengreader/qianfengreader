@@ -10,5 +10,12 @@ import java.util.List;
 
 @Mapper
 public interface BookRepository extends JpaRepository<Book,Integer> {
+    /*自定义*/
+    //查询 state 状态(完结)
+    List<Book> findByState(String state);
+    //查询 isvip 免费
+    List<Book> findByIsvip(String vip);
+    /*//删除
+    void deleteByBid(Integer bid);*/
 
 }

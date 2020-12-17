@@ -56,5 +56,13 @@ WHERE bt.`tid`=#{tid}
 AND bt.`typename`=bk.`type`
     </select>
 
+    <select id="findBySearch" resultType="book">
+        SELECT * FROM book WHERE bookname LIKE  concat('%',#{search},'%')
+    </select>
+
+    <select id="findById" resultType="book">
+        SELECT * FROM book where bid=#{bid}
+    </select>
+
 
 </mapper>

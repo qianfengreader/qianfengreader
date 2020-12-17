@@ -1,5 +1,5 @@
 server:
-  port: 8088
+  port: 8087
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
@@ -25,3 +25,9 @@ spring:
 mybatis:
   mapper-locations: classpath:mapper/*Mapper.xml
   type-aliases-package: com.qf.pojo
+
+qiniu:
+  ak: m7mFmCTX55PMNPkEBaOLFQMLxW4ZFfZwf2EBm1M2
+  sk: dn220PqIs813-IYrIZtzO_bGLXPo3QSVNep6wNty
+  bucket: qf-2007
+  url: http://qk18e4f7p.hb-bkt.clouddn.com/

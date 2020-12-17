@@ -34,4 +34,9 @@ public interface BookMapper {
     List<Book> findAllBangDanFromWordsNum();
 
     List<Book> findByTypeId(@Param("tid") Integer id);
+
+    List<Book> findBySearch(@Param("search") String search);
+
+    Book findById(@Param("bid") Integer id);
+
 }
